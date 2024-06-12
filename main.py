@@ -56,3 +56,21 @@ print(f"Average Changes: ${average_change:.2f}") #': .2f' is to make the result 
 print(f"Greatest Increase in Profits: {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease in Profits: {greatest_decrease['date']} (${greatest_decrease['amount']})")
 
+# Optimize the result and export it as a text file
+results = (
+    "Financial Analysis\n"
+    "----------------------------\n"
+    f"Total Months: {total_months}\n"
+    f"Net Total: ${net_total}\n"
+    f"Average Change: ${average_change:.2f}\n"
+    f"Greatest Increase in Profits: {greatest_increase['date']} (${greatest_increase['amount']})\n"
+    f"Greatest Decrease in Profits: {greatest_decrease['date']} (${greatest_decrease['amount']})\n"
+)
+
+# Print the results to the console
+print(results)
+
+# Export the results to a text file
+output_file_path = 'financial_analysis.txt'
+with open(output_file_path, mode='w') as file:
+    file.write(results)
