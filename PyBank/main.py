@@ -15,7 +15,7 @@ greatest_decrease = {"date": None, "amount": float('inf')}
 
 # Open and read csv file
 with open(file_path, mode='r') as file:
-    reader = csv.reader(file)
+    reader = csv.reader(file, delimiter=',')
     header = next(reader)
 
     for row in reader:
