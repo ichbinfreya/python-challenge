@@ -45,8 +45,7 @@ Default command
   #You can use the csv functions by importing csv
   
   with open(file_path, mode='r') as file:
-  # This opens the file specified by file_path in read mode ('r'). The with statement ensures that the file is properly closed after its suite
-  finishes.
+  #This opens the file specified by file_path in read mode ('r'). The with statement ensures that the file is properly closed after its suite finishes.
   
   reader = csv.reader(file, delimiter=',')
   #This creates a csv.reader object which will iterate over lines in the given CSV file.
